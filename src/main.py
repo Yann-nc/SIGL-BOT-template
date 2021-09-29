@@ -7,7 +7,7 @@ from discord.ext.commands import Bot
 
 from todos import *
 
-token = "ODkyODIyMDQ2NTE2NjA5MTA0.YVSfUw.p7cs9wHVSBwRisEByuYeDOCyhiM"
+token = "<TOKEN>"
 
 
 bot = commands.Bot(
@@ -41,7 +41,7 @@ async def on_message(message):
         await make_admin(message)
 
     if message.content.startswith("!xkcd"):
-        await random_comic(message)
+        await random_comic(message, bot)
 
 # @bot.command(name='name')
 # async def print_server(context):
